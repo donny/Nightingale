@@ -1,15 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import * as firebase from 'firebase';
-
-// Initialize Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyD-1CE0WmolMzDTvzzcspj8skCzbOTYOHc",
-  authDomain: "fiftytwo-kestrel.firebaseapp.com",
-  databaseURL: "https://fiftytwo-kestrel.firebaseio.com",
-  storageBucket: "fiftytwo-kestrel.appspot.com",
-};
-const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 export default class App extends React.Component {
   render() {
