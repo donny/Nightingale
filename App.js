@@ -7,8 +7,8 @@ import ChuckNorrisScreen from './components/ChuckNorrisScreen.js';
 import LinusTorvaldsScreen from './components/LinusTorvaldsScreen.js';
 
 const MainScreenNavigator = TabNavigator({
-  Recent: { screen: ChuckNorrisScreen },
-  All: { screen: LinusTorvaldsScreen },
+  'Chuck Norris': { screen: ChuckNorrisScreen },
+  'Linus Torvalds': { screen: LinusTorvaldsScreen },
 });
 
 export default MainScreenNavigator;

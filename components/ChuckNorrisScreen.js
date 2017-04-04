@@ -4,7 +4,11 @@ import styles from '../Styles.js';
 
 class ChuckNorrisScreen extends React.Component {
   render() {
-    return <Text>List of Chuck Norris jokes</Text>
+    return (
+      <View style={styles.container}>
+        <Text>List of Chuck Norris jokes</Text>
+      </View>
+    )
   }
 }
 

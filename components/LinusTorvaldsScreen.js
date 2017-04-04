@@ -4,7 +4,11 @@ import styles from '../Styles.js';
 
 class LinusTorvaldsScreen extends React.Component {
   render() {
-    return <Text>List of Linus Torvalds jokes</Text>
+    return (
+      <View style={styles.container}>
+        <Text>List of Linus Torvalds jokes</Text>
+      </View>
+    )
   }
 }
 
