@@ -1,15 +1,14 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import styles from './Styles.js';
+import { TabNavigator } from 'react-navigation';
 
-export default class App extends React.Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
-  }
-}
+import styles from './Styles.js';
+import ChuckNorrisScreen from './components/ChuckNorrisScreen.js';
+import LinusTorvaldsScreen from './components/LinusTorvaldsScreen.js';
+
+const MainScreenNavigator = TabNavigator({
+  Recent: { screen: ChuckNorrisScreen },
+  All: { screen: LinusTorvaldsScreen },
+});
+
+export default MainScreenNavigator;
