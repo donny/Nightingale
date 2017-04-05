@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, TouchableOpacity } from 'react-native';
 import styles from '../Styles.js';
 
 class LinusTorvaldsScreen extends React.Component {
@@ -28,6 +28,7 @@ class LinusTorvaldsScreen extends React.Component {
     this.state = {
       joke: null
     };
+    this.fetchData = this.fetchData.bind(this);
   }
 
   componentDidMount() {
@@ -53,7 +54,9 @@ class LinusTorvaldsScreen extends React.Component {
   renderJokeView() {
     return (
       <View style={styles.container}>
-        <Text>{this.state.joke}</Text>
+        <TouchableOpacity onPress={this.fetchData}>
+          <Text style={styles.mainText}>{this.state.joke}</Text>
+        </TouchableOpacity>
       </View>
     )
   }
