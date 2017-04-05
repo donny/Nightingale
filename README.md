@@ -1,6 +1,6 @@
 # nightingale
 
-Nightingale is ...
+Nightingale is a React Native app to display jokes from the Internet Chuck Norris Database.
 
 ### Background
 
