@@ -1,8 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View, ActivityIndicator, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, TouchableOpacity, Image } from 'react-native';
 import styles from '../Styles.js';
 
 class LinusTorvaldsScreen extends React.Component {
+  static navigationOptions = {
+    tabBar: {
+      icon: ({ tintColor }) => (
+        <Image
+          source={require('../images/keyboard.png')}
+          style={[{tintColor: tintColor}]}
+        />
+      )
+    }
+  }
+  
   fetchData() {
     const resource = 'http://api.icndb.com/jokes/random?' +
       'firstName=Linus&' +

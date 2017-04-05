@@ -7,8 +7,12 @@ import ChuckNorrisScreen from './components/ChuckNorrisScreen.js';
 import LinusTorvaldsScreen from './components/LinusTorvaldsScreen.js';
 
 const MainScreenNavigator = TabNavigator({
-  'Chuck Norris': { screen: ChuckNorrisScreen },
   'Linus Torvalds': { screen: LinusTorvaldsScreen },
+  'Chuck Norris': { screen: ChuckNorrisScreen },
+}, {
+  tabBarOptions: {
+    activeTintColor: 'cadetblue',
+  }
 });
 
 export default MainScreenNavigator;
