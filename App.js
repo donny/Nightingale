@@ -11,7 +11,15 @@ const MainScreenNavigator = TabNavigator({
   'Chuck Norris': { screen: ChuckNorrisScreen },
 }, {
   tabBarOptions: {
-    activeTintColor: 'cadetblue',
+    activeTintColor: 'dodgerblue',
+    inactiveTintColor: 'grey',
+    showIcon: true,
+    indicatorStyle: {
+      backgroundColor: 'dodgerblue'
+    },
+    style: {
+      backgroundColor: 'azure',
+    }
   }
 });
 
