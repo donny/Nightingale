@@ -17,8 +17,8 @@ yarn run ios
 
 ...
 
-![Screenshot1](https://raw.githubusercontent.com/donny/nightingale/master/screenshot1.png
-![Screenshot1](https://raw.githubusercontent.com/donny/nightingale/master/screenshot2.png
+![Screenshot1](https://raw.githubusercontent.com/donny/nightingale/master/screenshot1.png)
+![Screenshot1](https://raw.githubusercontent.com/donny/nightingale/master/screenshot2.png)
 
 ### Implementation
 
