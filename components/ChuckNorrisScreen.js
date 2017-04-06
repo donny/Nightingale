@@ -1,8 +1,9 @@
 import React from 'react';
-import { StyleSheet, Text, View, ListView, Image } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator, TouchableOpacity, Image } from 'react-native';
 import styles from '../Styles.js';
+import CommonJokeScreen from './CommonJokeScreen.js';
 
-class ChuckNorrisScreen extends React.Component {
+class ChuckNorrisScreen extends CommonJokeScreen {
   static navigationOptions = {
     tabBar: {
       icon: ({ tintColor }) => (
@@ -14,25 +15,21 @@ class ChuckNorrisScreen extends React.Component {
     }
   }
 
-  constructor(props) {
-    super(props);
-    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    this.state = {
-      dataSource: ds.cloneWithRows([
-        'John', 'Joel', 'James', 'Jimmy', 'Jackson', 'Jillian', 'Julie', 'Devin'
-      ])
-    };
-  }
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <ListView
-          dataSource={this.state.dataSource}
-          renderRow={(rowData) => <Text>{rowData}</Text>}
-        />
-      </View>
-    )
+  fetchData() {
+    const resource = 'http://api.icndb.com/jokes/random?' +
+      'escape=javascript&' +
+      'exclude=[nerdy,explicit]'
+    return fetch(resource)
+      .then((response) => response.json())
+      .then((responseData) => {
+        this.setState({
+          joke: responseData.value.joke
+        })
+      })
+      .catch((error) => {
+        console.error(error);
+      })
+      .done();
   }
 }
 
