@@ -15,6 +15,8 @@ Nightingale can be run by installing Expo from the App Store or Google Play Stor
 
 ### Implementation
 
+There are many React Native boilerplates, for example: [Pepperoni](http://getpepperoni.com) and [Create React Native App](https://github.com/react-community/create-react-native-app) (CRNA). Nightingale uses CRNA as the React Native boilerplate. One of the benefits of using CRNA is its integration with [Expo](https://expo.io). Expo doesn't require Xcode or Android Studio. And it hosts the project and provides the Expo app that allows users to test and run our React Native apps.
+
 To get started with [Create React Native App](https://github.com/react-community/create-react-native-app), we could run the following commands:
 
 ```shell
@@ -22,6 +24,38 @@ yarn global add create-react-native-app
 create-react-native-app nightingale
 cd nightingale
 yarn run ios
+```
+
+I have used the [Internet Chuck Norris Database](http://www.icndb.com) before and the [REST API](http://www.icndb.com/api/) is super easy to use. For the `Chuck Norris` jokes, we use the following resource URL: `http://api.icndb.com/jokes/random?escape=javascript&exclude=[nerdy,explicit]`. And for the `Linus Torvalds` jokes: `http://api.icndb.com/jokes/random?firstName=Linus&lastName=Torvalds&escape=javascript&limitTo=[nerdy]&exclude=[explicit]`.
+
+The main screen is implemented as [`CommonJokeScreen.js`](https://github.com/donny/nightingale/blob/master/components/CommonJokeScreen.js) with the following `render`:
+
+```javascript
+render() {
+  if (!this.state.joke) {
+    return this.renderLoadingView();
+  } else {
+    return this.renderJokeView();
+  }
+}
+
+renderLoadingView() {
+  return (
+    <View style={styles.container}>
+      <ActivityIndicator size="large"/>
+    </View>
+  )
+}
+
+renderJokeView() {
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity onPress={this.fetchData}>
+        <Text style={styles.mainText}>{this.state.joke}</Text>
+      </TouchableOpacity>
+    </View>
+  )
+}
 ```
 
 ### Conclusion
