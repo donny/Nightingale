@@ -17,7 +17,7 @@ Nightingale can be run by installing Expo from the App Store or Google Play Stor
 
 There are many React Native boilerplates, for example: [Pepperoni](http://getpepperoni.com) and [Create React Native App](https://github.com/react-community/create-react-native-app) (CRNA). Nightingale uses CRNA as the React Native boilerplate. One of the benefits of using CRNA is its integration with [Expo](https://expo.io). Expo doesn't require Xcode or Android Studio. And it hosts the project and provides the Expo app that allows users to test and run our React Native apps.
 
-To get started with [Create React Native App](https://github.com/react-community/create-react-native-app), we could run the following commands:
+To get started with [Create React Native App](https://github.com/react-community/create-react-native-app), we could run the following shell commands:
 
 ```shell
 yarn global add create-react-native-app
