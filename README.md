@@ -28,7 +28,7 @@ yarn run ios
 
 I have used the [Internet Chuck Norris Database](http://www.icndb.com) before and the [REST API](http://www.icndb.com/api/) is super easy to use. For the `Chuck Norris` jokes, we use the following resource URL: `http://api.icndb.com/jokes/random?escape=javascript&exclude=[nerdy,explicit]`. And for the `Linus Torvalds` jokes: `http://api.icndb.com/jokes/random?firstName=Linus&lastName=Torvalds&escape=javascript&limitTo=[nerdy]&exclude=[explicit]`.
 
-The main screen is implemented as [`CommonJokeScreen.js`](https://github.com/donny/nightingale/blob/master/components/CommonJokeScreen.js) with the following `render`:
+The main screen is implemented as [`CommonJokeScreen.js`](https://github.com/donny/nightingale/blob/master/components/CommonJokeScreen.js) with the following `render` function:
 
 ```javascript
 render() {
@@ -60,4 +60,4 @@ renderJokeView() {
 
 ### Conclusion
 
-...
+It's quite interesting to develop iOS and Android apps using React Native. On one hand, it allows us to get started building the app and it provides familiar tools and language for web developers. But on the other hand, for those we have done native mobile development like myself, it seems that React Native introduces another layer of black box in our code implementation. I still have mixed feelings about this. But whatever it is, in my opinion I think React Native brings an exciting change in our mobile development landscape.
